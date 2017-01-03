@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://notechsolution.github.io">
-  <title>NodeBootJS Getting Started | The Home of NotechSolution</title>
+  <title>How To Config SublimeREPL for Scheme | The Home of NotechSolution</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="NodeBootJS Getting Started">
-<meta property="og:url" content="http://notechsolution.github.io/2016/12/27/NodeBootJS-Getting-Started/index.html">
+  <meta name="description" content="Sublime Text is a sophisticated text editor for code, markup and prose.You&amp;#x2019;ll love the slick user interface, extraordinary features and amazing performance.
+
+while
+
+Scheme is a functional prog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How To Config SublimeREPL for Scheme">
+<meta property="og:url" content="http://notechsolution.github.io/2017/01/03/How-To-Config-SublimeREPL-for-Scheme/index.html">
 <meta property="og:site_name" content="The Home of NotechSolution">
-<meta property="og:updated_time" content="2016-12-26T23:01:11.239Z">
+<meta property="og:description" content="Sublime Text is a sophisticated text editor for code, markup and prose.You&amp;#x2019;ll love the slick user interface, extraordinary features and amazing performance.
+
+while
+
+Scheme is a functional prog">
+<meta property="og:updated_time" content="2017-01-03T14:47:46.676Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeBootJS Getting Started">
+<meta name="twitter:title" content="How To Config SublimeREPL for Scheme">
+<meta name="twitter:description" content="Sublime Text is a sophisticated text editor for code, markup and prose.You&amp;#x2019;ll love the slick user interface, extraordinary features and amazing performance.
+
+while
+
+Scheme is a functional prog">
   
     <link rel="alternative" href="/atom.xml" title="The Home of NotechSolution" type="application/atom+xml">
   
@@ -130,25 +145,59 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-NodeBootJS-Getting-Started" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-How-To-Config-SublimeREPL-for-Scheme" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      NodeBootJS Getting Started
+      How To Config SublimeREPL for Scheme
     </h1>
   
 
-        <a href="/2016/12/27/NodeBootJS-Getting-Started/" class="archive-article-date">
-  	<time datetime="2016-12-26T22:59:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-27</time>
+        <a href="/2017/01/03/How-To-Config-SublimeREPL-for-Scheme/" class="archive-article-date">
+  	<time datetime="2017-01-03T14:44:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <blockquote>
+<p>Sublime Text is a sophisticated text editor for code, markup and prose.<br>You&#x2019;ll love the slick user interface, extraordinary features and amazing performance.</p>
+</blockquote>
+<p>while</p>
+<blockquote>
+<p><strong>Scheme</strong> is a <a href="https://en.wikipedia.org/wiki/Functional_programming_language" title="Functional programming language" target="_blank" rel="external">functional programming language</a> and one of the two main <a href="https://en.wikipedia.org/wiki/Programming_language_dialect" title="Programming language dialect" target="_blank" rel="external">dialects</a> of the programming language <a href="https://en.wikipedia.org/wiki/Lisp_programming_language" title="Lisp programming language" target="_blank" rel="external">Lisp</a>. Unlike <a href="https://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp" target="_blank" rel="external">Common Lisp</a>, the other main dialect, Scheme follows a <a href="https://en.wikipedia.org/wiki/Minimalism_(computing" target="_blank" rel="external">minimalist</a> &#x201C;Minimalism (computing)&#x201D;) design philosophy specifying a small standard core with powerful tools for language extension.</p>
+</blockquote>
+<p>Maybe Sublime Text is your favirate editor, reading <structure and="" interpretation="" of="" computer="" program="">, and trying to have a try about the exercises there. Then you may want to make Sublime to edit / build / run scheme file. </structure></p>
+<p>Below steps can give you a reference guide about how to setup it:<br><a id="more"></a></p>
+<h3 id="LISP-Scheme-Interpreter-Installation"><a href="#LISP-Scheme-Interpreter-Installation" class="headerlink" title="LISP Scheme Interpreter Installation"></a>LISP Scheme Interpreter Installation</h3><ol>
+<li>Install LISP scheme interpreter - <a href="http://people.csail.mit.edu/jaffer/SCM.html" target="_blank" rel="external">SCM</a>. there are several interpreter for scheme - DrRacket, MIT-Scheme. but SCM may be the easist one to integrate with Sublime.</li>
+<li>Add scm bin folder into your system path. e.g. <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set PATH = %PATH%; C:\Program Files (x86)\scm\</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>then verify it using command line</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">C:\Users\Administrator&gt;scm</div><div class="line">SCM version 5f2, Copyright (C) 1990-2006 Free Software Foundation.</div><div class="line">SCM comes with ABSOLUTELY NO WARRANTY; for details type (terms).</div><div class="line">This is free software, and you are welcome to redistribute it</div><div class="line">under certain conditions; type (terms) for details.</div><div class="line">;loading C:\Program Files (x86)\slib\require</div><div class="line">;done loading C:\Program Files (x86)\slib\require.scm</div><div class="line">;loading C:\Program Files (x86)\scm\Transcen</div><div class="line">;done loading C:\Program Files (x86)\scm\Transcen.scm</div></pre></td></tr></table></figure>
+<h3 id="REPL-installation-in-Sublime-Text-3"><a href="#REPL-installation-in-Sublime-Text-3" class="headerlink" title="REPL installation in Sublime Text 3"></a>REPL installation in Sublime Text 3</h3><ol>
+<li><p>Open the package installation of Sublime Text, if not install yet, plz try Tools -&gt; Install Package Control</p>
+</li>
+<li><p>Install Package &#x201C;Scheme&#x201D;</p>
+</li>
+<li><p>Install Package &#x201C;SublimeREPL&#x201D;</p>
+</li>
+<li><p>Then, open Preferences -&gt; Browse Packages -&gt; SublimeREPL -&gt; config -&gt; Scheme -&gt; Main.sublime-menu,  edit the section with the &#x201C;id&#x201D;: &#x201C;repl_scheme&#x201D; :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;windows&quot;: [&quot;scm&quot;, &quot;-f&quot;, &quot;$file_basename&quot;]}</div></pre></td></tr></table></figure>
+</li>
+<li><p>Save and restart Sublime Text, choose the target file, Open Tools -&gt; Build System, you may find &#x201C;Scheme&#x201D; is auto selected. if not, plz choose &#x201C;Scheme&#x201D;</p>
+</li>
+<li><p>Try build/run the file via Tools -&gt; Build</p>
+</li>
+<li><p>If you meet error like <strong>&#x201C;File Not Find&#x201D;, [&#x201C;gsi&#x201D;,&#x201D;-:d-&#x201C;,&#x201D;your-file-path&#x201D;]</strong>, it may be caused that your configuration are override by Scheme package. then you may go to C:\Users\Adminstrator\AppData\Roaming\Sublime Text 3\Installed Packages, find the scheme package &#x201C;Scheme.sublime-package&#x201D;, unzip it and modify the startup command line in the file &#x201C;Scheme.sublime-build&#x201D;, change it to :</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">    <span class="string">&quot;cmd&quot;</span>: [<span class="string">&quot;scm&quot;</span>, <span class="string">&quot;-f&quot;</span>, <span class="string">&quot;$file&quot;</span>],</div><div class="line">    <span class="string">&quot;file_regex&quot;</span>: <span class="string">&quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;</span>,</div><div class="line">    <span class="string">&quot;selector&quot;</span>: <span class="string">&quot;source.scheme&quot;</span></div><div class="line">}</div></pre></td></tr></table></figure>
+
       
 
       
@@ -158,7 +207,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeBootJS/">NodeBootJS</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SICP/">SICP</a></li></ul>
 	</div>
 
       
@@ -222,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/03/How-To-Config-SublimeREPL-for-Scheme/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          How To Config SublimeREPL for Scheme
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/24/NodebootJS-Introduction/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NodebootJS Introduction</div>
+    <a href="/2016/12/27/NodeBootJS-Getting-Started/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NodeBootJS Getting Started</div>
       <i class="icon-circle-right"></i>
     </a>
   
